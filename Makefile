@@ -114,7 +114,7 @@ virtualbox: ## install VirtualBox
 	$(INSTALL) virtualbox
 
 ansible: ## install Ansible
-	apt-get install software-properties-common
+	$(INSTALL) software-properties-common
 	$(APT_REPOSITORY) ppa:ansible/ansible
 	$(INSTALL) ansible
 	$(INSTALL) sshpass 
