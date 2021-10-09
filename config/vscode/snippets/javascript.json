@@ -1,0 +1,98 @@
+{
+	"console.log($1)": {
+		"prefix": "cl",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "console.log()"
+	},
+	"console.log($1) return": {
+		"prefix": "clr",
+		"body": [
+			"console.log($1)",
+			"return"
+		],
+		"description": "console.log(); return;"
+	},
+	"console.dir($1)": {
+		"prefix": "cd",
+		"body": [
+			"console.dir($1)"
+		],
+		"description": "console.dir()"
+	},
+	"console.warn($1)": {
+		"prefix": "cw",
+		"body": [
+			"console.warn($1)"
+		],
+		"description": "console.warn()"
+	},
+	"console.error($1)": {
+		"prefix": "ce",
+		"body": [
+			"console.error($1)"
+		],
+		"description": "console.error()"
+	},
+	"try catch console.error($e)": {
+		"prefix": "tcd",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (${2:err}) {",
+			"\tconsole.error($2)",
+			"\treturn",
+			"}"
+		],
+		"description": "try catch console.error($e)"
+	},
+	"try catch console.error($e) finally": {
+		"prefix": "tcf",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (${2:err}) {",
+			"\tconsole.error($2)",
+			"} finally {",
+			"\t$3",
+			"}"
+		],
+		"description": "try catch console.error($e)"
+	},
+	"document.getElementById('$1')": {
+		"prefix": "getid",
+		"body": [
+			"document.getElementById('$1')"
+		],
+		"description": "document.getElementById()"
+	},
+	"document.getElementsByClassName('$1')": {
+		"prefix": "getclass",
+		"body": [
+			"document.getElementsByClassName('$1')"
+		],
+		"description": "document.getElementsByClassName()"
+	},
+	"document.getElementsByTagName('$1')": {
+		"prefix": "getclass",
+		"body": [
+			"document.getElementsByTagName('$1')"
+		],
+		"description": "document.getElementsByTagName()"
+	},
+	"document.querySelector('$1')": {
+		"prefix": "get",
+		"body": [
+			"document.querySelector('$1')"
+		],
+		"description": "document.querySelector()"
+	},
+	"document.querySelectorAll('$1')": {
+		"prefix": "getall",
+		"body": [
+			"document.querySelectorAll('$1')"
+		],
+		"description": "document.querySelectorAll()"
+	},
+}

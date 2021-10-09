@@ -1,0 +1,14 @@
+[dash-to-dock]
+dash-max-icon-size=20
+dock-position='BOTTOM'
+multi-monitor=true
+preferred-monitor=2
+show-apps-at-top=true
+
+[dash-to-panel]
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+available-monitors=[0, 1, 2]
+hotkeys-overlay-combo='TEMPORARILY'
+panel-anchors='{"0":"MIDDLE","1":"MIDDLE","2":"MIDDLE"}'
+panel-lengths='{"0":100,"1":100,"2":100}'
+panel-sizes='{"0":32,"1":32,"2":32}'

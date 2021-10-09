@@ -1,0 +1,15 @@
+/*
+
+!.gitignore
+!README.md
+
+!/config
+!/gnome
+!/install
+!/theme
+
+!/config.ini
+!/dotfiles.ini
+!/functions.sh
+!/Makefile
+!/Vagrantfile

@@ -1,0 +1,127 @@
+{
+	"var_dump($1) die()": {
+		"prefix": [
+			"vdd",
+			"vdie"
+		],
+		"body": [
+			"var_dump($1);",
+			"die();"
+		],
+		"description": "dump & die"
+	},
+	"var_dump($1);": {
+		"prefix": [
+			"vd"
+		],
+		"body": [
+			"var_dump($1);"
+		],
+		"description": "dump"
+	},
+	"die('ok');": {
+		"prefix": [
+			"dok"
+		],
+		"body": [
+			"die('ok');"
+		],
+		"description": "die('ok');"
+	},
+	"try catch var_dump($e) die()": {
+		"prefix": [
+			"tcd"
+		],
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (\\Exception $${2:$e}) {",
+			"\tvar_dump($$2->getMessage());",
+			"\tvar_dump($$2);",
+			"\tdie();",
+			"}"
+		],
+		"description": "Try selected code"
+	},
+	"try ... catch ... finally ...": {
+		"prefix": [
+			"tcf"
+		],
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (\\Exception $${2:$e}) {",
+			"\tvar_dump($$2->getMessage());",
+			"} finally {",
+			"\t$3",
+			"}"
+		],
+		"description": "try catch finally"
+	},
+	"public function": {
+		"prefix": [
+			"pubf"
+		],
+		"body": [
+			"public function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "public function(){}"
+	},
+	"protected function": {
+		"prefix": [
+			"prof"
+		],
+		"body": [
+			"protected function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "protected function(){}"
+	},
+	"private function": {
+		"prefix": [
+			"prif"
+		],
+		"body": [
+			"private function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "private function(){}"
+	},
+	"public static function": {
+		"prefix": [
+			"pubsf"
+		],
+		"body": [
+			"public static function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "public static function(){}"
+	},
+	"protected static function": {
+		"prefix": [
+			"prosf"
+		],
+		"body": [
+			"protected static function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "protected static function(){}"
+	},
+	"private static function": {
+		"prefix": [
+			"prisf"
+		],
+		"body": [
+			"private static function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "private static function(){}"
+	}
+}

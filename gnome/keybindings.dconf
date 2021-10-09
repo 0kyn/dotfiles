@@ -1,0 +1,14 @@
+[custom0]
+binding='<Super>v'
+command="copyq -e 'showAt()'"
+name='Open copyq'
+
+[custom1]
+binding='<Super>t'
+command='google-chrome --app="https://translate.google.fr/?hl=fr"'
+name='GoogleTranslate'
+
+[custom2]
+binding='<Super>c'
+command='google-chrome --app="https://www.google.com"'
+name='Open Chrome'

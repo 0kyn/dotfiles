@@ -1,0 +1,77 @@
+{
+	"php if": {
+		"prefix": [
+			"pif"
+		],
+		"body": [
+			"<?php if ($1) : ?>",
+			"\t$2",
+			"<?php endif; ?>"
+		],
+		"description": "php if condition inside html template"
+	},
+	"php if/else": {
+		"prefix": [
+			"pifel"
+		],
+		"body": [
+			"<?php if ($1) : ?>",
+			"\t$2",
+			"<?php else : ?>",
+			"\t$3",
+			"<?php endif; ?>"
+		],
+		"description": "php if/else condition inside html template"
+	},
+	"php for": {
+		"prefix": [
+			"pfor"
+		],
+		"body": [
+			"<?php for ($$i = 0; $$i<$1; $$i++) : ?>",
+			"\t$2",
+			"<?php endfor; ?>"
+		],
+		"description": "php for loop inside html template"
+	},
+	"php foreach": {
+		"prefix": [
+			"pforeach"
+		],
+		"body": [
+			"<?php foreach ($1 as $2) : ?>",
+			"\t$3",
+			"<?php endforeach; ?>"
+		],
+		"description": "php foreach loop inside html template"
+	},
+	"php comment": {
+		"prefix": [
+			"pcom"
+		],
+		"body": [
+			"<?php /*",
+			"\t$1",
+			"*/ ?>"
+		],
+		"description": "php comment inside html template"
+	},
+	"php echo": {
+		"prefix": [
+			"pe"
+		],
+		"body": [
+			"<?php echo $$1 ?>"
+		],
+		"description": "php echo inside html template"
+	},
+	"php vdd": {
+		"prefix": [
+			"pvdd"
+		],
+		"body": [
+			"<?php var_dump($1); die(); ?>"
+		],
+		"description": "php var_dump(); die(); inside html template"
+	}
+}

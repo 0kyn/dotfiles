@@ -1,0 +1,10 @@
+{
+	"echo $1 exit": {
+		"prefix": "ee",
+		"body": [
+			"echo $1",
+			"exit;"
+		],
+		"description": "Echo and exit terminal"
+	}
+}
