@@ -25,7 +25,7 @@ mktmp: rmtmp
 	mkdir $(TMP)
 
 rmtmp:
-	rm -r $(TMP)
+	-rm -r $(TMP)
 
 all: upgrade system mktmp custom-shell install-utils install-packages install-custom  link dconf aliases restart-gnome ## update and install everything
 
