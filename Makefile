@@ -122,7 +122,7 @@ ansible: ## install Ansible
 google-chrome: ## install Google Chrome
 	- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $(TMP)/google-chrome-stable_current_amd64.deb
 	- sudo dpkg -i google-chrome-stable_current_amd64.deb 
-	$(INSTALL) --force
+	$(INSTALL) --fix-broken
 	sudo dpkg -i google-chrome-stable_current_amd64.deb
 	rm $(TMP)/google-chrome-stable_current_amd64.deb
 
