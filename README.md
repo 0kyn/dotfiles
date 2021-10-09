@@ -20,6 +20,39 @@ make
 # will display available commands
 ```
 
+## Configuration
+
+`./config.ini` contains system and programs configurations (timezone, keyboard layouts...)
+
+`./dotfiles.ini` contains each dotfiles present in `config` folder and the target where its symbolic link should point to.
+```ini
+[tmux]
+config=~/.tmux.conf
+
+# tmux config file ~/.dotfile/config/tmux/.tmux.conf will target ~/.tmux.conf
+```
+
+## Usage
+
+### Test
+
+To test this dotfiles manager, you should run a VM with Vagrant.
+
+```bash
+# this will run Ubuntu 18.04
+vagrant up
+```
+
+```bash
+# Into the Vagrant box
+# user: vagrant
+# pwd:  vagrant
+
+cd ~/.dotfiles
+
+make all
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
