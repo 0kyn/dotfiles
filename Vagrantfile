@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "dotfiles"
     config.vm.network "private_network", ip: "192.168.50.4", hostname: true
 
-    config.vm.synced_folder ".", "/home/vagrant/dotfiles"
+    config.vm.synced_folder ".", "/home/vagrant/.dotfiles"
 
     # Update repositories
     config.vm.provision :shell, inline: "sudo apt update -y"
