@@ -100,7 +100,7 @@ docker: ## install Docker engine
 	$(RELEASE_CODENAME) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 	$(UPDATE_INSTALL) docker-ce docker-ce-cli containerd.io
 #	docker non root user | https://docs.docker.com/engine/install/linux-postinstall/
-	- sudo groupadd docker
+	-sudo groupadd docker
 	sudo usermod -aG docker $(USER)
 
 vagrant: ## install Vagrant
@@ -120,10 +120,10 @@ ansible: ## install Ansible
 	$(INSTALL) sshpass 
 
 google-chrome: ## install Google Chrome
-	- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o $(TMP)/google-chrome-stable_current_amd64.deb
-	- sudo dpkg -i google-chrome-stable_current_amd64.deb 
+	-wget -O $(TMP)/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	-sudo dpkg -i $(TMP)/google-chrome-stable_current_amd64.deb 
 	$(INSTALL) --fix-broken
-	sudo dpkg -i google-chrome-stable_current_amd64.deb
+	sudo dpkg -i $(TMP)/google-chrome-stable_current_amd64.deb
 	rm $(TMP)/google-chrome-stable_current_amd64.deb
 
 discord: ## install Discord
