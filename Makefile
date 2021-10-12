@@ -41,7 +41,7 @@ install-utils: update ## install utils packages
 install-packages: ## install packages
 	sudo xargs $(INSTALL) <./install/packages
 
-install-custom: mktmp copyq nodejs vscode docker vagrant virtualbox ansible google-chrome discord rmtmp ## install custom
+install-custom: mktmp copyq nodejs vscode docker vagrant virtualbox ansible google-chrome discord slack rmtmp ## install custom
 
 link: ## symlink dotfiles
 	sudo ./functions.sh link_files
@@ -130,3 +130,8 @@ discord: ## install Discord
 	curl -J -L -o $(TMP)/discord.deb "https://discord.com/api/download?platform=linux&format=deb"
 	$(INSTALL) $(TMP)/discord.deb
 	rm $(TMP)/discord.deb
+
+slack: ## install Slack
+	curl -J -o $(TMP)/slack.deb "https://downloads.slack-edge.com/releases/linux/4.20.0/prod/x64/slack-desktop-4.20.0-amd64.deb"
+	$(INSTALL) $(TMP)/slack.deb
+	rm $(TMP)/slack.deb
