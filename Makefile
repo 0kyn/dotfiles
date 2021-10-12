@@ -27,7 +27,7 @@ mktmp: rmtmp
 rmtmp:
 	-rm -r $(TMP)
 
-all: upgrade system mktmp custom-shell install-utils install-packages install-custom  link dconf aliases restart-gnome ## update and install everything
+all: upgrade system mktmp custom-shell install-utils install-packages install-custom link dconf aliases restart-gnome ## update and install everything
 
 update: ## update packages list
 	$(UPDATE)
