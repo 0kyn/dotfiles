@@ -36,7 +36,7 @@ config=~/.tmux.conf
 
 ### Test
 
-To test this dotfiles manager, you should run a VM with Vagrant.
+To test this dotfiles manager, you should run a VM with [Vagrant](https://www.vagrantup.com/).
 
 ```bash
 # this will run Ubuntu 18.04
