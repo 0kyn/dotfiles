@@ -41,7 +41,7 @@
 			"console.log($1)",
 			"process.exit(1)"
 		],
-		"description": "console.error()"
+		"description": "console.log($1); process.exit(1);"
 	},
 	"try catch console.error($e)": {
 		"prefix": "tcd",
