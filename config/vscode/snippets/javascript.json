@@ -35,6 +35,14 @@
 		],
 		"description": "console.error()"
 	},
+	"console.log($1) process.exit()": {
+		"prefix": "cle",
+		"body": [
+			"console.log($1)",
+			"process.exit(1)"
+		],
+		"description": "console.error()"
+	},
 	"try catch console.error($e)": {
 		"prefix": "tcd",
 		"body": [
